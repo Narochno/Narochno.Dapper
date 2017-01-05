@@ -25,6 +25,7 @@ public class GetAllAddresses : IQuery<IList<Address>>
 {
     public IList<Address> Execute(ISession session)
     {
+        //using Dapper here!
         return session.Query<Address>("select * from address").ToList();
     }
 }
@@ -44,14 +45,15 @@ public class AddressRepository : IAddressRepository
         this.cacheManager = cacheManager;
     }
 
-    public async Task<IList<Address>> GetAllAddresses()
+    public IList<Address> GetAllAddresses()
     {
-        return await cacheManager.Retrieve<IList<Address>, GetAllAddresses>(() => database.Query(new GetAllAddresses()).ActiveFilter()).ConfigureAwait(false);
+        //TODO use cacheManager!
+        return database.Query(new GetAllAddresses());
     }
 
-    public async Task<Address> GetAddressById(long id)
+    public Address GetAddressById(long id)
     {
-        return (await GetAllAddresses().ConfigureAwait(false)).FirstOrDefault(x => x.Id == id);
+        return GetAllAddresses().FirstOrDefault(x => x.Id == id);
     }    
 }
 ```
