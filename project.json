@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0-preview1",
+    "buildOptions": {
+        "warningsAsErrors": true
+    },
+
+    "dependencies": {
+        "Dapper": "1.50.2",
+        "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+        "Microsoft.Extensions.Logging.Abstractions": "1.1.0"
+    },
+
+    "frameworks": {
+        "netstandard1.6": {
+        }
+    }
+}
