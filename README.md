@@ -15,7 +15,7 @@ Use database driver that supports ADO.NET.
 ### Implement IDbConnectionFactory
 
 ```csharp
-serviceCollection.AddData(new NpgsqlConnectionFactory(connectionString));
+serviceCollection.AddNarochnoDapper(new NpgsqlConnectionFactory(connectionString));
 ```
 
 ### Create Queries or Commands
