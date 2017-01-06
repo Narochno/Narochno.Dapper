@@ -1,4 +1,4 @@
-# Narochno.Data
+# Narochno.Dapper
 
 A Unit of Work pattern for Dapper.
 Use database driver that supports ADO.NET.

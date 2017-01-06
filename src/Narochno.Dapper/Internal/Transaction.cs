@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Narochno.Data.Internal
+namespace Narochno.Dapper.Internal
 {
     public class Transaction : ITransaction
     {

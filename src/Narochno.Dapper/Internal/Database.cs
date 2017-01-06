@@ -1,4 +1,4 @@
-﻿namespace Narochno.Data.Internal
+﻿namespace Narochno.Dapper.Internal
 {
     public class Database : IDatabase
     {

@@ -1,4 +1,4 @@
-﻿namespace Narochno.Data
+﻿namespace Narochno.Dapper
 {
     public interface ICommand
     {

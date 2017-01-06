@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Narochno.Data
+namespace Narochno.Dapper
 {
     public interface IDbConnectionFactory
     {

@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Narochno.Data.Internal;
+using Narochno.Dapper.Internal;
 
-namespace Narochno.Data
+namespace Narochno.Dapper
 {
     public static class IServiceCollectionExtensions
     {
-        public static void AddVisibilityData(this IServiceCollection serviceCollection, IDbConnectionFactory dbConnectionFactory)
+        public static void AddData(this IServiceCollection serviceCollection, IDbConnectionFactory dbConnectionFactory)
         {
             serviceCollection.AddScoped<ISession, Session>();
             serviceCollection.AddTransient<ITransaction, Transaction>();

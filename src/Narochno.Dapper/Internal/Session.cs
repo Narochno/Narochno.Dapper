@@ -5,7 +5,7 @@ using System.Linq;
 using Dapper;
 using Microsoft.Extensions.Logging;
 
-namespace Narochno.Data.Internal
+namespace Narochno.Dapper.Internal
 {
     public class Session : ISession, IDisposable
     {

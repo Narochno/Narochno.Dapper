@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Narochno.Data
+namespace Narochno.Dapper
 {
     public interface ITransaction : IDisposable
     {
