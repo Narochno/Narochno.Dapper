@@ -57,3 +57,17 @@ public class AddressRepository : IAddressRepository
     }    
 }
 ```
+
+### Transactions
+
+I try to avoid transactions by just making inserts/updates not dependant on other inserts/updates but it's unavoidable.
+
+This supports nesting `BeginTransaction` by using a stacks so your calls to other repositories don't need to know or care about transactions.  A commit only occurs on the final commit call.  The using block will auto rollback if commit isn't called.
+
+```csharp
+using (var transaction = session.BeginTransaction())
+{
+    ...
+    transaction.Commit();
+}
+```
